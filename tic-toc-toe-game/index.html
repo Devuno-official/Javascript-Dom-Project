@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+    <title>TicTacToe</title>
+</head>
+<body>
+    <div id="game_name">
+        <h1>Tic</h1>
+        <h1>Tac</h1>
+        <h1>Toe</h1>
+    </div>
+           <div id="status-area">
+            <span id="player-x-label">Player X</span> vs <span id="player-o-label">Player O</span>
+        </div>
+        <div id="game-board">
+            <div id="top">
+                <div class="tcell" id="cell-0">Player <span>X</span></div>
+                <div class="tcell" id="cell-1">Winner <span id="win-x"></span></div>
+                <div class="tcell" id="cell-2">Player <span>O</span></div>
+            </div>
+            <div id="bottom">
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+                <div class="bcell"></div>
+            </div>
+        </div>
+        <input type="button" value="Reset Game" id="reset-button">
+        <footer>
+            <h2>🥸Muhammad Yasir junior web developer😈</h2>
+        </footer>
+</body>
+</html>

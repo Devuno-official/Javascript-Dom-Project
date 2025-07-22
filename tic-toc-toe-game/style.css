@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Manaca';
+    src: url('./Manaca.ttf') format('truetype');
+}
+
+html,body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: #43115B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3.125rem;
+}
+
+#game_name{
+    position: fixed;
+    left:-2%;
+    bottom: 20%;
+}
+
+ h1{
+    font-family:Montserrat, sans-serif;
+    font-size: 10rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 8rem;
+    background: linear-gradient( to right, #ff6b6b, yellow, yellow, #ff6b6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#status-area{
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    gap: 1rem;
+}
+
+
+#game-board{
+    min-height: 58vh;
+    width: 25%;
+    background: #2b0040;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 16px rgba(5, 5, 5, 0.2);
+    margin-top: -3rem;
+}
+
+#top{
+    min-height: 17vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    border-bottom: 0.12rem solid black;
+}
+
+.tcell{
+    width: 26%;
+    min-height: 10vh;
+    background: yellow;
+    border-radius: 5px;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#cell-1{
+    background: #ff6b6b;
+    color: black;
+}
+
+span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#bottom{
+    min-height: 46vh;
+        display:grid;
+        grid-template-columns: repeat(3, 0.9fr);
+        gap: 0.35rem;
+        width: 100%;   
+        aspect-ratio: 1 / 1;   
+        padding: 2vw;
+ }
+
+
+.bcell{
+    width: 100%;
+    min-height: 10vh;
+    background: #43115B;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: clamp(2rem, 10vw, 3rem); /* grows/shrinks */
+    cursor:pointer;
+    transition: background .2s;
+    border-radius: 0.625rem;
+}
+/* main cells */
+.bcell:hover{
+        background:#444;
+    }
+
+#reset-button{
+    width: 15%;
+    min-height: 2rem;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s;
+    position: relative;
+    bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#reset-button:hover{
+    background: #444;
+}
+
+ footer{
+    width: 100%;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: 0.5rem;
+ }
+ footer>h2{
+     font-size: 1rem;
+     font-family: 'Monaca';
+ }
+
+@media screen and (max-width: 768px) and (min-width :250px){
+    #game-board{
+        width: 80%;
+        position: relative;
+        z-index: 1;
+    }
+    #top{
+        flex-direction: column;
+    }
+    .tcell{
+        width: 100%;
+        min-height: 10vh;
+    }
+    #bottom{
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1rem;
+    }
+    .bcell{
+        min-height: 4vh;
+        font-size: clamp(2rem, 5vw, 2.5rem);
+    }
+
+    #reset-button{
+        width: 50%;
+        min-height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    h1{
+        font-size: 3rem;
+        line-height: 2rem;
+    }
+}
